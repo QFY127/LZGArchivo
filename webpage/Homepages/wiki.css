@@ -1,15 +1,87 @@
-/* 基础样式重置 */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.image-container {
+	float: left;
+	margin: 20px;
+    flex: 2;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.text-container {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.category {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.action-button {
+    margin-top: 30px;
+}
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.divider {
+    width: 60px;
+    height: 3px;
+    background-color: #1a93d1;
+    margin-bottom: 30px;
+}
+.text-container p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #444;
+}
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.content {
+	 align-items: center;
+    display: flex;
+    margin: 10px 0;
+    gap: 10px;
+	 display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+/* 基础样式重置 - 不引用外部资源 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* 新增顶部蓝色横杠样式 */
+.top-blue-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #0A84F1; /* 维基百科风格的蓝色 */
+}
+/* 全局样式 */
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: #333;
+    color: #222;
     background-color: #f8f9fa;
     padding: 0;
     margin: 0;
@@ -33,6 +105,7 @@ ul {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    width: 100%;
 }
 
 /* 头部样式 */
@@ -49,6 +122,7 @@ header {
     margin-bottom: 10px;
 }
 
+/* Logo样式 */
 .logo {
     display: flex;
     align-items: center;
@@ -63,6 +137,7 @@ header {
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    font-size: 24px;
     margin-right: 10px;
 }
 
@@ -71,30 +146,36 @@ header {
     font-weight: bold;
 }
 
+.logo-text-1 {
+	font-size: 15px;
+    font-weight: bold;
+}
+
+/* 搜索框样式 */
 .search-container {
+    display: flex;
     flex: 0 0 300px;
-    position: relative;
+    margin: 0 20px;
 }
 
 .search-box {
-    width: 100%;
+    flex: 1;
     padding: 6px 10px;
-    padding-right: 35px;
     border: 1px solid #a2a9b1;
-    border-radius: 2px;
+    border-right: none;
+    border-radius: 2px 0 0 2px;
 }
 
 .search-button {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
+    background-color: #0645ad;
+    color: white;
     border: none;
-    color: #666;
+    padding: 0 12px;
+    border-radius: 0 2px 2px 0;
     cursor: pointer;
 }
 
+/* 导航链接样式 */
 .nav-links {
     display: flex;
     list-style: none;
@@ -104,7 +185,7 @@ header {
     margin-left: 15px;
 }
 
-/* 二级导航 */
+/* 次级导航样式 */
 .header-bottom {
     border-top: 1px solid #a2a9b1;
     padding-top: 8px;
@@ -121,36 +202,38 @@ header {
     font-size: 14px;
 }
 
-/* 主内容区 */
+/* 移动端菜单按钮 */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: 1px solid #a2a9b1;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* 主内容区样式 */
 .main-content {
     display: flex;
     margin: 20px 0;
     gap: 20px;
 }
 
-/* 左侧边栏 */
+/* 侧边栏样式 */
+.sidebar-left, .sidebar-right {
+    background-color: white;
+    border: 1px solid #a2a9b1;
+    padding: 10px;
+}
+
 .sidebar-left {
     flex: 0 0 250px;
 }
 
-/* 右侧边栏 */
 .sidebar-right {
     flex: 0 0 200px;
 }
 
-/* 中间内容区 */
-.content-area {
-    flex: 1;
-    background-color: white;
-    border: 1px solid #a2a9b1;
-    padding: 20px;
-}
-
-/* 边栏模块 */
 .sidebar-module {
-    background-color: white;
-    border: 1px solid #a2a9b1;
-    padding: 10px;
     margin-bottom: 15px;
 }
 
@@ -161,19 +244,18 @@ header {
     border-bottom: 1px solid #a2a9b1;
 }
 
-/* 目录样式 */
-.toc {
+.toc, .sidebar-module ul {
     list-style: none;
     font-size: 14px;
 }
 
-.toc li {
+.toc li, .sidebar-module ul li {
     margin-bottom: 5px;
 }
 
 .toc ul {
-    margin-left: 15px;
-    margin-top: 3px;
+    margin-left: 20px;
+    margin-top: 5px;
 }
 
 /* 信息框样式 */
@@ -185,23 +267,21 @@ header {
     width: 100%;
     height: 150px;
     background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    margin-bottom: 5px;
+    border: 1px solid #a2a9b1;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #666;
+    margin-bottom: 10px;
 }
 
 .info-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
 }
 
 .info-table td {
     padding: 5px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #eaecee;
 }
 
 .info-table td:first-child {
@@ -209,38 +289,49 @@ header {
     width: 40%;
 }
 
-/* 内容区域样式 */
+/* 中间内容区域样式 */
+.content-area {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #a2a9b1;
+}
+
 .page-title {
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 32px;
+    margin-bottom: 15px;
     color: #222;
 }
 
 .disambiguation {
     font-size: 14px;
     font-style: italic;
-    color: #555;
     margin-bottom: 20px;
+    color: #54595d;
 }
 
 .section {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .section h2 {
-    font-size: 22px;
-    margin: 15px 0 10px;
+    font-size: 24px;
+    margin: 15px 0;
     padding-bottom: 5px;
     border-bottom: 1px solid #a2a9b1;
 }
 
-/* 底部样式 */
+.section h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* 页脚样式 */
 footer {
     background-color: #f8f9fa;
     border-top: 1px solid #a2a9b1;
     padding: 20px 0;
     margin-top: 30px;
-    font-size: 14px;
 }
 
 .footer-links {
@@ -253,21 +344,27 @@ footer {
 .footer-links li {
     margin-right: 15px;
     margin-bottom: 5px;
+    font-size: 14px;
 }
 
 .copyright {
-    color: #666;
+    font-size: 14px;
+    color: #54595d;
 }
 
-/* 响应式调整 */
+/* 响应式设计 - 适配移动设备 */
 @media (max-width: 900px) {
     .main-content {
         flex-direction: column;
     }
     
     .sidebar-left, .sidebar-right {
-        flex: none;
         width: 100%;
+        flex: none;
+    }
+    
+    .sidebar-right {
+        order: -1;
     }
     
     .search-container {
@@ -275,20 +372,43 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .header-top {
         flex-wrap: wrap;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
     }
     
     .search-container {
         order: 3;
         width: 100%;
-        margin-top: 10px;
+        margin: 10px 0 0 0;
         flex: none;
     }
-    
-    .nav-links {
+}
+
+@media (max-width: 480px) {
+    .logo-text {
         display: none;
+    }
+    
+    .subnav-links li {
+        margin-right: 10px;
+        font-size: 13px;
+    }
+    
+    .content-area {
+        padding: 10px;
+    }
+    
+    .page-title {
+        font-size: 24px;
     }
 }
     

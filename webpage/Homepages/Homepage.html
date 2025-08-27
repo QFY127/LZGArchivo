@@ -2,73 +2,90 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <!-- 确保移动设备正确显示 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>维基百科风格页面</title>
-    <!-- 引用本地CSS文件 -->
+    <title>联众国</title>
+    <!-- 引用本地CSS文件 - 不引用外部资源 -->
     <link rel="stylesheet" href="/LZGArchivo/webpage/Homepages/wiki.css">
 </head>
 <body>
     <!-- 页面头部 -->
     <header>
+		 <!-- 新增顶部蓝色横杠 -->
+    <div class="top-blue-bar"></div>
+    
         <div class="container">
             <!-- 顶部导航 -->
             <div class="header-top">
                 <!-- Logo区域 -->
                 <div class="logo">
-                    <div class="logo-icon">W</div>
-                    <div class="logo-text">维基百科</div>
+                    <div class="logo-icon"><img src="/LZGArchivo/image/LZSYlogo.jpg" width="100%" height="100%" alt=""/></div>
+                    <div class="logo-text">联众国档案部</div>
+					<div class="logo-text-1"> | 联合，自由与梦想</div>
                 </div>
-                
-                <!-- 搜索框 -->
-                <div class="search-container">
-                    <input type="text" class="search-box" placeholder="搜索条目...">
-                    <button class="search-button">🔍</button>
-                </div>
-                
+ 
                 <!-- 主导航链接 - 无登录功能 -->
                 <ul class="nav-links">
-                    <li><a href="#">条目</a></li>
-                    <li><a href="#">讨论</a></li>
-                    <li><a href="#">编辑</a></li>
-                    <li><a href="#">历史</a></li>
                 </ul>
+                
+                <!-- 移动端菜单按钮 -->
+                <button class="mobile-menu-btn">☰</button>
             </div>
             
             <!-- 次级导航 -->
             <div class="header-bottom">
                 <ul class="subnav-links">
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">内容</a></li>
-                    <li><a href="#">特色条目</a></li>
-                    <li><a href="#">最近更改</a></li>
-                    <li><a href="#">随机条目</a></li>
-                    <li><a href="#">帮助</a></li>
+                    <li><a href="#">联众国概念</a></li>
+                    <li><a href="#">联众成员国</a></li>
+                    <li><a href="#">活动与新闻</a></li>
+                    <li><a href="#">关注我们</a></li>
                 </ul>
             </div>
         </div>
     </header>
 
     <!-- 主内容区 -->
+	<!-- 主要内容区 -->
+        <main class="content">
+            <div class="image-container">
+                <img src="/LZGArchivo/image/LZGSYQP.jpg" width="100%" height="100%" alt="联众国旗帜" class="main-image">
+            </div>
+            <div class="text-container">
+                <div class="category">联众国档案部</div>
+                <h1>联众国档案管理记录部</h1>
+                <div class="divider"></div>
+                <p>
+                    档案部占据着至关重要且不可或缺的地位，为联众国各项事务的推进提供着坚实的信息支撑与历史依据。
+                </p>
+				 其档案部为记录自身国际事务运作而生。收集整理联众国各部门文件、成员国提案等资料，为开展研究并为联众国决策提供支持，助力其在国际合作与发展中发挥独特作用，是联众国事务推进的重要信息支撑。
+
+                <p>
+                    
+                </p>
+                <div class="action-button">
+                    <a href="#" class="btn"></a>
+                </div>
+            </div>
+        </main>
+
     <div class="container">
         <div class="main-content">
             <!-- 左侧边栏 -->
             <aside class="sidebar-left">
-                <!-- 语言选择模块 -->
+                <!-- 语言选择模块 - 不要填内容 -->
                 <div class="sidebar-module">
-                    <h3>其他语言</h3>
-                    <!-- 此处不要填写内容 - 仅展示结构 -->
+                    <h3>重要页面</h3>
                     <ul class="toc">
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">日本語</a></li>
-                        <li><a href="#">Español</a></li>
-                        <li><a href="#">更多</a></li>
+                        <li><a href="#">史历线</a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
                     </ul>
                 </div>
                 
-                <!-- 信息框模块 -->
+                <!-- 信息框模块 - 不要填内容 -->
                 <div class="sidebar-module">
-                    <h3>信息框</h3>
-                    <!-- 此处不要填写内容 - 仅展示结构 -->
+                    <h3>新闻</h3>
                     <div class="info-box">
                         <div class="info-image">图片位置</div>
                         <table class="info-table">
@@ -79,10 +96,9 @@
                     </div>
                 </div>
                 
-                <!-- 目录模块 -->
+                <!-- 目录模块 - 不要填内容 -->
                 <div class="sidebar-module">
                     <h3>目录</h3>
-                    <!-- 此处不要填写内容 - 仅展示结构 -->
                     <ul class="toc">
                         <li><a href="#section1">1. 章节一</a></li>
                         <li><a href="#section2">2. 章节二</a>
@@ -99,36 +115,30 @@
             <main class="content-area">
                 <!-- 页面标题 -->
                 <h1 class="page-title">页面标题</h1>
-                
-                <!-- 消歧义说明 -->
+                <!-- 消歧义说明 - 不要填内容 -->
                 <div class="disambiguation">
-                    <!-- 此处不要填写内容 - 仅展示结构 -->
                     关于其他用法，请参见「<a href="#">页面标题 (消歧义)</a>」。
                 </div>
                 
-                <!-- 引言部分 -->
+                <!-- 引言部分 - 不要填内容 -->
                 <div class="section intro">
-                    <!-- 此处不要填写内容 - 仅展示结构 -->
                     <p>这是引言部分，简要介绍页面主题的基本信息。</p>
                 </div>
                 
-                <!-- 章节一 -->
+                <!-- 章节一 - 不要填内容 -->
                 <div id="section1" class="section">
                     <h2>1. 章节一</h2>
-                    <!-- 此处不要填写内容 - 仅展示结构 -->
                     <p>章节一的内容段落。</p>
                 </div>
                 
-                <!-- 章节二 -->
+                <!-- 章节二 - 不要填内容 -->
                 <div id="section2" class="section">
                     <h2>2. 章节二</h2>
-                    <!-- 此处不要填写内容 - 仅展示结构 -->
                     <p>章节二的内容段落。</p>
                     
-                    <!-- 子章节 -->
+                    <!-- 子章节 - 不要填内容 -->
                     <div id="section2-1">
                         <h3>2.1 子章节</h3>
-                        <!-- 此处不要填写内容 - 仅展示结构 -->
                         <p>子章节的内容段落。</p>
                         <ul>
                             <li>列表项1</li>
@@ -137,17 +147,15 @@
                     </div>
                 </div>
                 
-                <!-- 章节三 -->
+                <!-- 章节三 - 不要填内容 -->
                 <div id="section3" class="section">
                     <h2>3. 章节三</h2>
-                    <!-- 此处不要填写内容 - 仅展示结构 -->
                     <p>章节三的内容段落。</p>
                 </div>
                 
-                <!-- 参考资料 -->
+                <!-- 参考资料 - 不要填内容 -->
                 <div class="section references">
                     <h2>参考资料</h2>
-                    <!-- 此处不要填写内容 - 仅展示结构 -->
                     <ul>
                         <li>参考来源1</li>
                         <li>参考来源2</li>
@@ -157,10 +165,9 @@
             
             <!-- 右侧边栏 -->
             <aside class="sidebar-right">
-                <!-- 页面工具 -->
+                <!-- 页面工具 - 不要填内容 -->
                 <div class="sidebar-module">
                     <h3>页面工具</h3>
-                    <!-- 此处不要填写内容 - 仅展示结构 -->
                     <ul class="toc">
                         <li><a href="#">查看源代码</a></li>
                         <li><a href="#">页面历史</a></li>
@@ -169,10 +176,9 @@
                     </ul>
                 </div>
                 
-                <!-- 相关条目 -->
+                <!-- 相关条目 - 不要填内容 -->
                 <div class="sidebar-module">
                     <h3>相关条目</h3>
-                    <!-- 此处不要填写内容 - 仅展示结构 -->
                     <ul class="toc">
                         <li><a href="#">相关条目1</a></li>
                         <li><a href="#">相关条目2</a></li>
@@ -186,7 +192,7 @@
     <!-- 页脚 -->
     <footer>
         <div class="container">
-            <!-- 底部链接 -->
+            <!-- 底部链接 - 不要填内容 -->
             <ul class="footer-links">
                 <li><a href="#">关于维基百科</a></li>
                 <li><a href="#">免责声明</a></li>
@@ -195,9 +201,8 @@
                 <li><a href="#">联系我们</a></li>
             </ul>
             
-            <!-- 版权信息 -->
+            <!-- 版权信息 - 不要填内容 -->
             <div class="copyright">
-                <!-- 此处不要填写内容 - 仅展示结构 -->
                 © 2023 示例内容 · 版权所有
             </div>
         </div>
