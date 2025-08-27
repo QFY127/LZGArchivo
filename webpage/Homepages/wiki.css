@@ -54,14 +54,12 @@ h1 {
     display: block;
 }
 .content {
-	 align-items: center;
     display: flex;
-    margin: 10px 0;
-    gap: 10px;
-	 display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+    margin-top: 40px;
+    margin-right: 120px;
+    margin-left: 120px;
+    margin-bottom: 40px;
+    gap: 40px;
 }
 /* 基础样式重置 - 不引用外部资源 */
 * {
@@ -102,6 +100,7 @@ ul {
 
 /* 容器样式 */
 .container {
+	
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
@@ -116,6 +115,7 @@ header {
 }
 
 .header-top {
+	
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -411,4 +411,464 @@ footer {
         font-size: 24px;
     }
 }
+
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 页面容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 页面标题样式 */
+.page-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #1a73e8;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+/* 标题下方的装饰线 */
+.main-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #1a73e8;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* 机构卡片容器 */
+.organs-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* 机构卡片样式 */
+.organ-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* 卡片显示动画 */
+.organ-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 卡片悬停效果 */
+.organ-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* 图标容器样式 */
+.organ-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    position: relative;
+}
+
+/* 使用CSS绘制各个图标 */
+/* 大会 - 锤子图标 */
+.gavel-icon::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 15px;
+    background-color: #1a73e8;
+    top: 10px;
+    left: 20px;
+    border-radius: 3px;
+}
+
+.gavel-icon::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    background-color: #1a73e8;
+    top: 25px;
+    left: 35px;
+    border-radius: 0 0 3px 3px;
+}
+
+/* 安全理事会 - 点状拱门图标 */
+.council-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.council-icon::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    border: 2px solid transparent;
+    border-top: 2px solid #1a73e8;
+    border-radius: 50% / 100% 100% 0 0;
+    top: 25px;
+}
+
+/* 用伪元素创建点阵 */
+.council-icon::after {
+    content: '• • • • • • • • • • • • • • • • • • • •';
+    color: #1a73e8;
+    font-size: 16px;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 22px;
+}
+
+/* 经济及社会理事会 - 手托叶子图标 */
+.economic-icon::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    border: 2px solid #1a73e8;
+    border-radius: 0 15px 15px 15px;
+    top: 30px;
+    left: 20px;
+    transform: rotate(-10deg);
+}
+
+.economic-icon::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #1a73e8;
+    border-radius: 0 50% 50% 0;
+    top: 20px;
+    left: 40px;
+    transform: rotate(-10deg);
+}
+
+/* 托管理事会 - 握手图标 */
+.trust-icon::before, .trust-icon::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 15px;
+    border: 2px solid #1a73e8;
+    border-radius: 0 8px 8px 0;
+}
+
+.trust-icon::before {
+    top: 30px;
+    left: 20px;
+    transform: rotate(10deg);
+}
+
+.trust-icon::after {
+    top: 35px;
+    left: 35px;
+    transform: rotate(-10deg);
+}
+
+/* 国际法院 - 天平图标 */
+.court-icon::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #1a73e8;
+    top: 30px;
+    left: 20px;
+}
+
+.court-icon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: #1a73e8;
+    top: 32px;
+    left: 40px;
+}
+
+.court-icon span:first-child, .court-icon span:last-child {
+    position: absolute;
+    width: 15px;
+    height: 10px;
+    border: 2px solid #1a73e8;
+    border-radius: 3px;
+}
+
+.court-icon span:first-child {
+    top: 47px;
+    left: 22px;
+}
+
+.court-icon span:last-child {
+    top: 47px;
+    left: 43px;
+}
+
+/* 为天平添加两个托盘 */
+.court-icon {
+    position: relative;
+}
+
+.court-icon::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #1a73e8;
+    top: 30px;
+    left: 20px;
+}
+
+.court-icon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: #1a73e8;
+    top: 32px;
+    left: 40px;
+}
+
+/* 创建天平的两个托盘 */
+.court-icon::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background-color: #1a73e8;
+    top: 30px;
+    left: 20px;
+}
+
+.court-icon::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: #1a73e8;
+    top: 32px;
+    left: 40px;
+}
+
+/* 左侧托盘 */
+.court-icon span:first-of-type {
+    position: absolute;
+    width: 15px;
+    height: 10px;
+    border: 2px solid #1a73e8;
+    border-radius: 3px;
+    top: 47px;
+    left: 22px;
+}
+
+/* 右侧托盘 */
+.court-icon span:last-of-type {
+    position: absolute;
+    width: 15px;
+    height: 10px;
+    border: 2px solid #1a73e8;
+    border-radius: 3px;
+    top: 47px;
+    left: 43px;
+}
+
+/* 秘书处 - 建筑图标 */
+.secretariat-icon::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    border: 2px solid #1a73e8;
+    top: 30px;
+    left: 20px;
+}
+
+.secretariat-icon::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    border: 2px solid #1a73e8;
+    border-top: none;
+    top: 20px;
+    left: 25px;
+}
+
+/* 建筑窗户 */
+.secretariat-icon span {
+    position: absolute;
+    width: 8px;
+    height: 6px;
+    border: 1px solid #1a73e8;
+}
+
+.secretariat-icon span:nth-child(1) { top: 35px; left: 25px; }
+.secretariat-icon span:nth-child(2) { top: 35px; left: 38px; }
+.secretariat-icon span:nth-child(3) { top: 35px; left: 51px; }
+.secretariat-icon span:nth-child(4) { top: 45px; left: 25px; }
+.secretariat-icon span:nth-child(5) { top: 45px; left: 38px; }
+.secretariat-icon span:nth-child(6) { top: 45px; left: 51px; }
+.secretariat-icon span:nth-child(7) { top: 55px; left: 25px; }
+.secretariat-icon span:nth-child(8) { top: 55px; left: 38px; }
+.secretariat-icon span:nth-child(9) { top: 55px; left: 51px; }
+
+/* 机构标题样式 */
+.organ-title {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #1a73e8;
+}
+
+/* 机构描述样式 */
+.organ-description {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* 了解更多链接样式 */
+.read-more {
+    display: inline-block;
+    color: #1a73e8;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.organ-card:hover .read-more {
+    color: #0d47a1;
+    transform: translateX(5px);
+}
+
+/* 详情部分样式 */
+.details-section {
+    display: none;
+    margin-bottom: 60px;
+}
+
+.details-section.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* 返回按钮样式 */
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #1a73e8;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    color: #0d47a1;
+    transform: translateX(-5px);
+}
+
+/* 详情内容样式 */
+.details-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.details-content h2 {
+    font-size: 2rem;
+    color: #1a73e8;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* 页脚样式 */
+.page-footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+    border-top: 1px solid #eee;
+    margin-top: 40px;
+}
+
+/* 隐藏元素的类 */
+.hidden {
+    display: none !important;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .organs-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .details-content {
+        padding: 20px;
+    }
+    
+    .details-content h2 {
+        font-size: 1.5rem;
+    }
+}
+    
     
