@@ -1,11 +1,207 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<title>Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>维基百科风格页面</title>
+    <!-- 引用本地CSS文件 -->
+    <link rel="stylesheet" href="wiki.css">
 </head>
-
 <body>
-1313
+    <!-- 页面头部 -->
+    <header>
+        <div class="container">
+            <!-- 顶部导航 -->
+            <div class="header-top">
+                <!-- Logo区域 -->
+                <div class="logo">
+                    <div class="logo-icon">W</div>
+                    <div class="logo-text">维基百科</div>
+                </div>
+                
+                <!-- 搜索框 -->
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="搜索条目...">
+                    <button class="search-button">🔍</button>
+                </div>
+                
+                <!-- 主导航链接 - 无登录功能 -->
+                <ul class="nav-links">
+                    <li><a href="#">条目</a></li>
+                    <li><a href="#">讨论</a></li>
+                    <li><a href="#">编辑</a></li>
+                    <li><a href="#">历史</a></li>
+                </ul>
+            </div>
+            
+            <!-- 次级导航 -->
+            <div class="header-bottom">
+                <ul class="subnav-links">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">内容</a></li>
+                    <li><a href="#">特色条目</a></li>
+                    <li><a href="#">最近更改</a></li>
+                    <li><a href="#">随机条目</a></li>
+                    <li><a href="#">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <div class="container">
+        <div class="main-content">
+            <!-- 左侧边栏 -->
+            <aside class="sidebar-left">
+                <!-- 语言选择模块 -->
+                <div class="sidebar-module">
+                    <h3>其他语言</h3>
+                    <!-- 此处不要填写内容 - 仅展示结构 -->
+                    <ul class="toc">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">日本語</a></li>
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">更多</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 信息框模块 -->
+                <div class="sidebar-module">
+                    <h3>信息框</h3>
+                    <!-- 此处不要填写内容 - 仅展示结构 -->
+                    <div class="info-box">
+                        <div class="info-image">图片位置</div>
+                        <table class="info-table">
+                            <tr><td>属性1</td><td>值1</td></tr>
+                            <tr><td>属性2</td><td>值2</td></tr>
+                            <tr><td>属性3</td><td>值3</td></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- 目录模块 -->
+                <div class="sidebar-module">
+                    <h3>目录</h3>
+                    <!-- 此处不要填写内容 - 仅展示结构 -->
+                    <ul class="toc">
+                        <li><a href="#section1">1. 章节一</a></li>
+                        <li><a href="#section2">2. 章节二</a>
+                            <ul>
+                                <li><a href="#section2-1">2.1 子章节</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#section3">3. 章节三</a></li>
+                    </ul>
+                </div>
+            </aside>
+            
+            <!-- 中间内容区域 -->
+            <main class="content-area">
+                <!-- 页面标题 -->
+                <h1 class="page-title">页面标题</h1>
+                
+                <!-- 消歧义说明 -->
+                <div class="disambiguation">
+                    <!-- 此处不要填写内容 - 仅展示结构 -->
+                    关于其他用法，请参见「<a href="#">页面标题 (消歧义)</a>」。
+                </div>
+                
+                <!-- 引言部分 -->
+                <div class="section intro">
+                    <!-- 此处不要填写内容 - 仅展示结构 -->
+                    <p>这是引言部分，简要介绍页面主题的基本信息。</p>
+                </div>
+                
+                <!-- 章节一 -->
+                <div id="section1" class="section">
+                    <h2>1. 章节一</h2>
+                    <!-- 此处不要填写内容 - 仅展示结构 -->
+                    <p>章节一的内容段落。</p>
+                </div>
+                
+                <!-- 章节二 -->
+                <div id="section2" class="section">
+                    <h2>2. 章节二</h2>
+                    <!-- 此处不要填写内容 - 仅展示结构 -->
+                    <p>章节二的内容段落。</p>
+                    
+                    <!-- 子章节 -->
+                    <div id="section2-1">
+                        <h3>2.1 子章节</h3>
+                        <!-- 此处不要填写内容 - 仅展示结构 -->
+                        <p>子章节的内容段落。</p>
+                        <ul>
+                            <li>列表项1</li>
+                            <li>列表项2</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- 章节三 -->
+                <div id="section3" class="section">
+                    <h2>3. 章节三</h2>
+                    <!-- 此处不要填写内容 - 仅展示结构 -->
+                    <p>章节三的内容段落。</p>
+                </div>
+                
+                <!-- 参考资料 -->
+                <div class="section references">
+                    <h2>参考资料</h2>
+                    <!-- 此处不要填写内容 - 仅展示结构 -->
+                    <ul>
+                        <li>参考来源1</li>
+                        <li>参考来源2</li>
+                    </ul>
+                </div>
+            </main>
+            
+            <!-- 右侧边栏 -->
+            <aside class="sidebar-right">
+                <!-- 页面工具 -->
+                <div class="sidebar-module">
+                    <h3>页面工具</h3>
+                    <!-- 此处不要填写内容 - 仅展示结构 -->
+                    <ul class="toc">
+                        <li><a href="#">查看源代码</a></li>
+                        <li><a href="#">页面历史</a></li>
+                        <li><a href="#">相关更改</a></li>
+                        <li><a href="#">打印版本</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 相关条目 -->
+                <div class="sidebar-module">
+                    <h3>相关条目</h3>
+                    <!-- 此处不要填写内容 - 仅展示结构 -->
+                    <ul class="toc">
+                        <li><a href="#">相关条目1</a></li>
+                        <li><a href="#">相关条目2</a></li>
+                        <li><a href="#">相关条目3</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <!-- 底部链接 -->
+            <ul class="footer-links">
+                <li><a href="#">关于维基百科</a></li>
+                <li><a href="#">免责声明</a></li>
+                <li><a href="#">隐私政策</a></li>
+                <li><a href="#">使用条款</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+            
+            <!-- 版权信息 -->
+            <div class="copyright">
+                <!-- 此处不要填写内容 - 仅展示结构 -->
+                © 2023 示例内容 · 版权所有
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
+    
